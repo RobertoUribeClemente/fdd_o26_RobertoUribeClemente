@@ -87,7 +87,7 @@ distinto, y por qué.
 
 URL pública: https://hub.docker.com/r/bobuc05/uv-reporte
 
-Digest: sha256:3633647237b0ae313e266343e599026931ed52ea997e7143cd5d1982e1693820
+Digest: sha256:a2a71496f3b5689db9900e9da4acb05b0c256877210577819bbe38fb0a745460
 
 Comando para correrla: docker run --rm docker.io/bobuc05/uv-reporte
 
@@ -97,26 +97,25 @@ La salida completa, en este orden, de cerrar sesión en el registro, borrar
 tu imagen local con la bandera de forzar, y correrla otra vez.
 
 ```text
-bobuc05@bobuc05-MCLG-XX:~/fdd/fdd_o26_RobertoUribeClemente/estudiantes/RobertoUribeClemente/09_python/uv_docker$ docker logout docker.io
-Not logged in to [https://index.docker.io/v1/](https://index.docker.io/v1/)
-bobuc05@bobuc05-MCLG-XX:~/fdd/fdd_o26_RobertoUribeClemente/estudiantes/RobertoUribeClemente/09_python/uv_docker$ docker rmi -f bobuc05/uv-reporte
-Untagged: bobuc05/uv-reporte:latest
-Untagged: bobuc05/uv-reporte@sha256:3633647237b0ae313e266343e599026931ed52ea997e7143cd5d1982e1693820
-Deleted: sha256:ceb921f59ba9a69fa4310588b82816d53f259410486297590ea732b574ef6169
-bobuc05@bobuc05-MCLG-XX:~/fdd/fdd_o26_RobertoUribeClemente/estudiantes/RobertoUribeClemente/09_python/uv_docker$ docker run --rm docker.io/bobuc05/uv-reporte
-Unable to find image 'docker.io/bobuc05/uv-reporte:latest' locally
-latest: Pulling from bobuc05/uv-reporte
-d175833b7147: Pull complete
-acbf34fa608c: Pull complete
-15f1c8eb1ab1: Pull complete
-285510654d1d: Pull complete
-66cb736eebc2: Pull complete
-65ecf672bc4b: Pull complete
-06fe3759dd1b: Pull complete
-05d66c4250ea: Pull complete
-1f59070073e0: Pull complete
-Digest: sha256:3633647237b0ae313e266343e599026931ed52ea997e7143cd5d1982e1693820
-Status: Downloaded newer image for docker.io/bobuc05/uv-reporte:latest
+bobuc05@bobuc05-MCLG-XX:~/fdd/fdd_o26_RobertoUribeClemente/estudiantes/RobertoUribeClemente/09_python/uv_docker$ podman logout docker.io
+Removed login credentials for docker.io
+bobuc05@bobuc05-MCLG-XX:~/fdd/fdd_o26_RobertoUribeClemente/estudiantes/RobertoUribeClemente/09_python/uv_docker$ podman rmi -f bobuc05/uv-reporte
+Untagged: docker.io/bobuc05/uv-reporte:latest
+Deleted: ceb921f59ba9a69fa4310588b82816d53f259410486297590ea732b574ef6169
+bobuc05@bobuc05-MCLG-XX:~/fdd/fdd_o26_RobertoUribeClemente/estudiantes/RobertoUribeClemente/09_python/uv_docker$ podman run --rm docker.io/bobuc05/uv-reporte
+Trying to pull docker.io/bobuc05/uv-reporte:latest...
+Getting image source signatures
+Copying blob 250d581ae02d done   | 
+Copying blob 8f7fd95a5c00 done   | 
+Copying blob 831e2d1de284 done   | 
+Copying blob 09d73ce1bb12 done   | 
+Copying blob 6c70cdcc3aff done   | 
+Copying blob 530dbdf15a3a done   | 
+Copying blob 5631e31764f3 done   | 
+Copying blob 6f49827d0a31 done   | 
+Copying blob 1864feb8bee3 done   | 
+Copying config ceb921f59b done   | 
+Writing manifest to image destination
                     Mi ambiente                    
 ┏━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 ┃ Qué              ┃ Valor                        ┃
