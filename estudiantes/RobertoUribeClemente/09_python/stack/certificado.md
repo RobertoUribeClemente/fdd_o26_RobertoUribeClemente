@@ -11,7 +11,8 @@ El repositorio es público: no escribas aquí tu nombre completo ni tu correo.
 
 ## Software Engineering Principles in Python, capítulos 3 y 4
 
-Fecha en que terminaste el capítulo 4 (AAAA-MM-DD): 16-10-24
+Fecha en que terminaste el capítulo 4 (AAAA-MM-DD):
+2026-10-16
 
 ![Captura del curso con los capítulos 3 y 4 al 100 %](./software-engineering.png)
 
