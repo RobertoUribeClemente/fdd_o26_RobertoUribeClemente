@@ -11,7 +11,7 @@ instrucción.
 - Tablas: Polars 2.x con expresiones (`pl.col`, `group_by`, `agg`, `filter`) y `scan_csv` cuando se lee sólo una parte. Nada de pandas, `.apply(axis=1)` ni `iterrows`. Polars 2.0 salió el 2026-10-06: fechas desde texto con `str.to_date()`, no `cast(pl.Date)`.
 - Archivos: Parquet para guardar tablas. Nunca cargar un pickle que no sea mío.
 - Pruebas: pytest 9.x.
-- Revisión: ruff 0.16.10 y mypy 2.4.0 .
+- Revisión: ruff 0.16.10 y mypy 2.4.0.
 
 ## Definición de terminado
 
