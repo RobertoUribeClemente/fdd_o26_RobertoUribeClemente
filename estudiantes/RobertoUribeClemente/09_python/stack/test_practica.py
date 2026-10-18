@@ -5,9 +5,10 @@ Mientras practica.py no defina Venta, pytest salta este archivo y lo dice.
 """
 
 import pytest
+from pydantic import ValidationError
 
 try:
-    from practica import Venta
+    from practica import Venta, total_por_tienda
 except ImportError:
     pytest.skip("practica.py todavía no define Venta", allow_module_level=True)
 
@@ -25,3 +26,15 @@ def test_fila_buena_se_convierte() -> None:
     venta = Venta.model_validate(BUENA)
     assert venta.cantidad == 3
     assert venta.precio == 120.5
+
+
+def test_fila_sucia_se_rechaza() -> None:
+    sucia = {**BUENA, "precio": "abc"}
+    with pytest.raises(ValidationError):
+        Venta.model_validate(sucia)
+
+
+def test_sin_ventas_da_tabla_vacia() -> None:
+    resultado = total_por_tienda([])
+    assert resultado.height == 0
+    assert resultado.columns == ["tienda", "total"]
